@@ -1,0 +1,10 @@
+# Make sure it finds the headers
+
+INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include ${GNULIBS_INCLUDE_DIR})
+LINK_LIBRARIES(${PROJECT_NAME}  ${REQUIRED_LIBRARIES} )
+
+FILE(GLOB SOURCES "*.cu" "*.cpp" "*.c" "*.h" ".cuh")
+
+CUDA_ADD_EXECUTABLE(cudadensef ${SOURCES})
+INSTALL(TARGETS cudadensef  RUNTIME DESTINATION bin)
+
