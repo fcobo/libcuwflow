@@ -4,7 +4,8 @@ libcuwflow: CUDA library to calculate "wFlow dense trajectory" on a GPU in C++.
 Fernando Cobo Aguilera and Manuel J. Marin-Jimenez
 
 
-This software is a CUDA implementation of  "wFlow dense trajectory" described in Jain et al. [1] 
+This software is a CUDA implementation of the "wFlow dense trajectories" described 
+in Jain et al. [1]
 --------------------------------------------------------------------------------
 
    Source-Code:   https://github.com/fcobo/libcuwflow
@@ -12,10 +13,10 @@ This software is a CUDA implementation of  "wFlow dense trajectory" described in
 --------------------------------------------------------------------------------
 Contents of the package:
 --------------------------------------------------------------------------------
+- data - contains test data
 - include - contains all the software header files
 - src - contains all the software source files
 - tests - contains a program to test the library
-- makefile - used to compile the library, the documentation and the test program
 
 
 --------------------------------------------------------------------------------
@@ -43,6 +44,34 @@ Open a terminal, and type in the command line the following instructions:
 ```
 If everything went well, both the library and test programs should have been
 created into <rootdir>/build subdirectories.
+
+Note for Windows users: make sure that the environment variables needed by CMake have 
+been properly setup before running the `cmake' command. E.g. BOOST_ROOT and CUDA_PATH
+
+You can run the test program by executing the following command:
+```
+cd <rootdir>
+cudadensef --video .\data\tr01_cam00.avi --start 100 --end 200 --curldiv --shearC --shearD --ofgpu --oftgpu --ihgpu --show
+```
+
+--------------------------------------------------------------------------------
+Citation:
+--------------------------------------------------------------------------------
+If you use this library for your publications, please, consider citing the 
+following publications:
+@inproceedings{castro2014icpr,
+ author = {Castro, F. M. and Marin-Jimenez, Manuel J. and Medina-Carnicer, Rafael},
+ title  = {{Pyramidal Fisher Motion} for Multiview Gait Recognition},
+ year = {2014},
+ booktitle = {Intl. Conference on Pattern Recognition (ICPR)}
+}
+
+@misc{libcuwflow,
+ author = {Cobo-Aguilera, Fernando and Marin-Jimenez, Manuel J.},
+ title = {{LibCuWFlow}: A CUDA library for computing dense trajectories in {C++}},
+ year = {2014},
+ note =   {Software available at \url{https://github.com/fcobo/libcuwflow}}
+}
 
 --------------------------------------------------------------------------------
 Contact the authors:
