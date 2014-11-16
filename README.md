@@ -4,8 +4,7 @@ libcuwflow: CUDA library to calculate "wFlow dense trajectory" on a GPU in C++.
 Fernando Cobo Aguilera and Manuel J. Marin-Jimenez
 
 
-This software is a CUDA implementation of the "wFlow dense trajectories" described 
-in Jain et al. [1]
+This software is a CUDA implementation of the "wFlow dense trajectories" described in Jain et al. [1]
 --------------------------------------------------------------------------------
 
    Source-Code:   https://github.com/fcobo/libcuwflow
