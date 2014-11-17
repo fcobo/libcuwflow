@@ -26,7 +26,7 @@ int main( int argc, char** argv )
         exit(EXIT_FAILURE);
     }
 
-    if( cudaSuccess != (error = cudaSetDevice(1)) ){
+    if( cudaSuccess != (error = cudaSetDevice(0)) ){
 
         cerr << "There was a problem during GPU initializaction.";
 
