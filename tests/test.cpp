@@ -16,11 +16,34 @@ int main( int argc, char** argv )
 
 	cudaError_t error;
 
-	if( cudaSuccess != (error = cudaSetDevice(0)) ){
+	int ndevices = cv::gpu::getCudaEnabledDeviceCount();
+    
+    if(ndevices == 0){
 
-		cerr << cudaGetLastError() << endl;
-		exit(EXIT_FAILURE);
-	}
+        cerr << "No CUDA-capable devices were detected by the installed CUDA driver" << endl;
+        cout << "Press to end";
+        getchar();
+        exit(EXIT_FAILURE);
+    }
+
+    if( cudaSuccess != (error = cudaSetDevice(1)) ){
+
+        cerr << "There was a problem during GPU initializaction.";
+
+        switch (error)
+        {
+        case 10:
+            cerr << "The device which has been supplied by the user does not correspond to a valid CUDA device." 
+                 << " Try to change cudaSetDevice() with another value."<<endl;
+            break;
+        default:
+            break;
+        }
+    
+        cout << "Press to end";
+        getchar();
+        exit(EXIT_FAILURE);
+    }
 
 	cv::gpu::printShortCudaDeviceInfo(0);
 
