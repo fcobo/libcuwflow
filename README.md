@@ -1,6 +1,6 @@
-==============================================================================
-libcuwflow: CUDA library to calculate "wFlow dense trajectory" on a GPU in C++.
-==============================================================================
+===============================================================================
+libcuwflow: CUDA library to compute "wFlow dense trajectories" on a GPU in C++.
+===============================================================================
 Fernando Cobo Aguilera and Manuel J. Marin-Jimenez
 
 
@@ -57,16 +57,16 @@ cudadensef --video .\data\tr01_cam00.avi --start 100 --end 200 --curldiv --shear
 Citation:
 --------------------------------------------------------------------------------
 If you use this library for your publications, please, consider citing the 
-following publications:
-@inproceedings{castro2014icpr,
- author = {Castro, F. M. and Marin-Jimenez, Manuel J. and Medina-Carnicer, Rafael},
+following publications:<br>
+@inproceedings{castro2014icpr,  
+author = {Castro, F. M. and Marin-Jimenez, Manuel J. and Medina-Carnicer, Rafael},
  title  = {{Pyramidal Fisher Motion} for Multiview Gait Recognition},
  year = {2014},
  booktitle = {Intl. Conference on Pattern Recognition (ICPR)}
 }
 
-@misc{libcuwflow,
- author = {Cobo-Aguilera, Fernando and Marin-Jimenez, Manuel J.},
+@misc{libcuwflow,  
+author = {Cobo-Aguilera, Fernando and Marin-Jimenez, Manuel J.},
  title = {{LibCuWFlow}: A CUDA library for computing dense trajectories in {C++}},
  year = {2014},
  note =   {Software available at \url{https://github.com/fcobo/libcuwflow}}
@@ -75,7 +75,7 @@ following publications:
 --------------------------------------------------------------------------------
 Contact the authors:
 --------------------------------------------------------------------------------
-Fernando Cobo Aguilera (developer) - i92coagf@uco.es / fcoboaguilera@gmail.com
+Fernando Cobo Aguilera (developer) - i92coagf@uco.es / fcoboaguilera@gmail.com<br>
 Manuel J. Marin-Jimenez (advisor) - mjmarin@uco.es
 
 
