@@ -4,7 +4,7 @@ INCLUDE (CheckIncludeFiles)
 # Make sure it finds the headers
 include_directories (${PROJECT_SOURCE_DIR}/include)
 
-FILE(GLOB hdrs "*.h*")
+FILE(GLOB hdrs "${PROJECT_SOURCE_DIR}/include/*.h*")
 FILE(GLOB srcs "*.c*")
 
 
