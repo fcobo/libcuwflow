@@ -23,6 +23,7 @@
 #include "cuda.h"
 #include "device_launch_parameters.h"
 
+#include "ownkernels.cuh"
 #include "kernels.cuh"
 
 
