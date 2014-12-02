@@ -388,7 +388,7 @@ int main( int argc, char** argv )
 
 			if(flow_gpu){
 
-				if(ixyScale < 1000/*flow_gpu_range*/){ //GPU version
+				if(ixyScale < flow_gpu_range){ //GPU version
 				 aux = GpuDescriptors::opticalFlowGpu(grey_mat,frameNum,ixyScale,&memoryof);	 
 				 aux.copyTo(flow_mat);
 				}
